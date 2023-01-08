@@ -1,0 +1,34 @@
+{
+  "name": "render-boost",
+  "version": "1.0.0",
+  "description": "render boost",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linyongkangm/render-boost.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linyongkangm/render-boost/issues"
+  },
+  "homepage": "https://github.com/linyongkangm/render-boost#readme",
+  "devDependencies": {
+    "esbuild": "0.16.15",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.3",
+    "vite-plugin-solid": "^2.5.0"
+  },
+  "dependencies": {
+    "solid-js": "^1.6.6"
+  }
+}
