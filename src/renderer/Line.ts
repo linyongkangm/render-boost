@@ -2,10 +2,12 @@ import * as THREE from 'three';
 import image from '../assets/PNG_transparency_demonstration_1.png';
 export const title = 'Line';
 export const icon = image;
-export const renderer = () => {
+export const renderer = (parent: HTMLElement) => {
   const renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 500);
+  parent.appendChild(renderer.domElement);
+
+  renderer.setSize(parent.clientWidth, parent.clientHeight);
+  const camera = new THREE.PerspectiveCamera(45, parent.clientWidth / parent.clientHeight, 1, 500);
   camera.position.set(0, 0, 100);
   camera.lookAt(0, 0, 0);
 
@@ -24,5 +26,4 @@ export const renderer = () => {
 
   scene.add(line);
   renderer.render(scene, camera);
-  return renderer.domElement;
 };
