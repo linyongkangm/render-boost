@@ -1,0 +1,25 @@
+.renderer_list {
+  @num: 5;
+  display: flex;
+  flex-wrap: wrap;
+  width: (80px + 10px + 8px * 2 + 2px) * @num;
+  margin: auto;
+}
+
+.renderer_item {
+  display: inline-block;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #333333;
+  margin: 10px 5px;
+  cursor: pointer;
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  h6 {
+    text-align: center;
+  }
+}
