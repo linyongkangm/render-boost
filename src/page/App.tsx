@@ -1,18 +1,7 @@
 import { Modal } from '@/component/Modal';
 import { Component, createRoot, onMount } from 'solid-js';
-import * as lineRenderer from '../renderer/Line';
+import * as rendererConfigs from '@/renderer/rendererConfigs';
 import './App.less';
-
-const rendererConfigs = [
-  lineRenderer,
-  lineRenderer,
-  lineRenderer,
-  lineRenderer,
-  lineRenderer,
-  lineRenderer,
-  lineRenderer,
-  lineRenderer,
-];
 
 const DrawRenderer: Component<{
   renderer: (parent: HTMLElement) => void;
@@ -31,7 +20,7 @@ const App: Component = () => {
 
   return (
     <section class='renderer_list' ref={container}>
-      {rendererConfigs.map((config) => {
+      {Object.values(rendererConfigs).map((config) => {
         return (
           <div
             class='renderer_item'
